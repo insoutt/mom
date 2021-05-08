@@ -2,3 +2,13 @@
 .w-m {
     max-width: 50% !important;
 }
+.reveal .controls-arrow { display: none; }
+
+.button {
+    border: 1px solid black;
+    font-size: 2rem;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: #3f8aff;
+    color: white;
+}

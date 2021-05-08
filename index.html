@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Para Mamá ♥️</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -12,85 +12,89 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
+	<audio id="audio" src="audio.mp3" autoplay="autoplay" loop="loop"></audio>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-color="aquamarine">
+				<section data-background-color="rgb(249 110 168)">
 					<h2>Para Mamá</h2>
 					<img id="image-0" class="w-m" src="images/svg/gift.svg">
+					<div class="text-center">
+						<button id="start" class="button">Empezar</button>
+					</div>
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 101 165)">
 					<h2>
 						Quiero regalarte una sonrisa que colme de luz tu corazón...
 					</h2>
 					<img id="image-1" class="w-m" src="images/svg/gift.svg">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 90 159)">
 					<h2>
 						Quiero regalarte un abrazo y con él, todo mi amor...
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-2">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4500" data-background-color="rgb(255 78 152)">
 					<h2>
 						Quiero que me mires a los ojos y que en ellos también te mires tú...
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-3">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 70 148)">
 					<h2>
 						Mamá...
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-4">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 66 146)">
 					<h2>
 						Eres para mi tan importante que el mundo a veces…
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-5">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 57 141)">
 					<h2>
 						Somos tú y yo...
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-6">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 47 135)">
 					<h2>
 						Tus brazos siempre se abrían cuando quería un abrazo...
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-7">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 36 129)">
 					<h2>
 						Tu corazón comprendía cuándo necesitaba una amiga...
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-8">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 31 126)">
 					<h2>
 						Tus ojos tiernos se endurecían cuando me hacía falta una lección...
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-9">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(253 23 120)">
 					<h2>
 						Tu fuerza y tu amor me guiaron y me dieron alas para volar...
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-10">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(251 19 117)">
 					<h2>
 						No existen las palabras para expresar todo mi gran amor hacia ti…
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-11">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 14 116)">
 					<h2>
 						Pero déjame decirte…
 					</h2>
 					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-12">
 				</section>
-				<section data-background-color="aquamarine">
+				<section data-autoslide="4000" data-background-color="rgb(255 12 115)">
 					<h2>
 						Gracias por todo Mamá.
 					</h2>
@@ -102,13 +106,15 @@
 		<script src="dist/reveal.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				// hash: true,
-			});
+			Reveal.initialize();
 
+			$(document).ready(function() {
+				$("#start").click(function () {
+					console.log('click')
+					$('#audio').get(0).play();
+					Reveal.next();
+				})
+			});
 			var images = [
 				'images/svg/gift.svg',
 				'images/svg/023-baby.svg',
