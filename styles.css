@@ -12,3 +12,10 @@
     background: #3f8aff;
     color: white;
 }
+
+@media only screen and (max-width: 600px) {
+    .button {
+        font-size: 4rem;
+        padding: 55px 90px;
+    }
+}
