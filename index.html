@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="aquamarine">
+					<h2>Para Mamá</h2>
+					<img id="image-0" class="w-m" src="images/svg/gift.svg">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Quiero regalarte una sonrisa que colme de luz tu corazón...
+					</h2>
+					<img id="image-1" class="w-m" src="images/svg/gift.svg">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Quiero regalarte un abrazo y con él, todo mi amor...
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-2">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Quiero que me mires a los ojos y que en ellos también te mires tú...
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-3">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Mamá...
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-4">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Eres para mi tan importante que el mundo a veces…
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-5">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Somos tú y yo...
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-6">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Tus brazos siempre se abrían cuando quería un abrazo...
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-7">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Tu corazón comprendía cuándo necesitaba una amiga...
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-8">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Tus ojos tiernos se endurecían cuando me hacía falta una lección...
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-9">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Tu fuerza y tu amor me guiaron y me dieron alas para volar...
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-10">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						No existen las palabras para expresar todo mi gran amor hacia ti…
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-11">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Pero déjame decirte…
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-12">
+				</section>
+				<section data-background-color="aquamarine">
+					<h2>
+						Gracias por todo Mamá.
+					</h2>
+					<img class="w-m" src="images/svg/gift.svg" alt="Para mamá" id="image-13">
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				// hash: true,
+			});
+
+			var images = [
+				'images/svg/gift.svg',
+				'images/svg/023-baby.svg',
+				'images/svg/007-maternity.svg',
+				'images/svg/026-maternity.svg',
+				'images/svg/008-mother.svg',
+				'images/svg/earth.svg',
+				'images/svg/035-drawing.svg',
+				'images/svg/045-holding-hands.svg',
+				'images/svg/043-mothers-day.svg',
+				'images/svg/baby.svg',
+				'images/svg/037-birds.svg',
+				'images/svg/embrace.svg',
+				'images/svg/pilot.svg',
+				'images/svg/042-love.svg',
+			];
+			Reveal.on( 'slidechanged', event => {
+				var currentX = event.indexh
+				var currentY = event.indexv
+				var id = '#image-' + currentX;
+				console.log($(id))
+				$(id).attr('src', images[currentX] + '?id=' + Math.trunc(Math.random()*10000));
+			} );
+		</script>
+	</body>
+</html>
