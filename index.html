@@ -136,9 +136,12 @@
 				var currentY = event.indexv
 				var id = '#image-' + currentX;
 				$(id).attr('src', images[currentX] + '?id=' + Math.trunc(Math.random()*10000));
-				$(id).attr('style', 'opacity: 1');
+				setTimeout(function () {
+					$(id).attr('style', 'opacity: 1');
+				}, 200)
+
 				if (currentX === 13) {
-					setTimeout(() => {
+					setTimeout(function() {
 						$('#audio').get(0).pause();
 					}, 8000)
 				}
